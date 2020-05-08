@@ -4,13 +4,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { SitesModule } from './sites/sites.module';
 
 @Module({
   imports: [
-    AuthModule, 
+    AuthModule,
     UsersModule,
-    MongooseModule.forRoot('mongodb://localhost/analytics')
-  ],
+    SitesModule,
+    MongooseModule.forRoot('mongodb://localhost/analytics') ],
   controllers: [AppController],
   providers: [AppService],
 })
